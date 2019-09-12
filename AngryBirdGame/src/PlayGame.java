@@ -1,10 +1,20 @@
+import java.util.Scanner;
 
 public class PlayGame
 	{
-
+static Scanner stringInput = new Scanner(System.in);
+static String birdOrPig;
+	
 		public static void main(String[] args)
 			{
-				// TODO Auto-generated method stub
+				UserInputs.main(args);
+				birdOrPig = stringInput.nextLine();
+				
+				//if(birdOrPig = "pig" != null)
+					{
+				PigUserLaunches.main(args);
+					}
+				BirdUserLaunches.main(args);
 
 			}
 
