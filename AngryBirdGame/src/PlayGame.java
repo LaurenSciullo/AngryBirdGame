@@ -8,14 +8,7 @@ static String birdOrPig;
 		public static void main(String[] args)
 			{
 				UserInputs.main(args);
-				birdOrPig = stringInput.nextLine();
 				
-				//if(birdOrPig = "pig" != null)
-					{
-				PigUserLaunches.main(args);
-					}
-				BirdUserLaunches.main(args);
-
 			}
 
 	}

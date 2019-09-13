@@ -19,38 +19,24 @@ static String userName;
 				pig();
 			}
 		
-		public static int bird()
+		public static void bird()
 		{
 			userBird = intInput.nextInt();
 				if (userBird == 1)
 					{
-						System.out.println("Glad to hear it, birds are better. How was your day today? (10)Good, (5)Medium, (0)Bad.");
-						
-						int userDay = intInput.nextInt();
-						if (userDay == 10)
-							{
-								System.out.println("A good day means an easy level, you are not angry enough.");
-							}
-						else if (userDay == 5)
-							{
-								System.out.println("A medium day means medium level, you're sort of angry, but not quite there.");
-							}
-						else 
-							{
-								System.out.println("A bad day, yes!! You are angry enough to be an effective angry bird :D.");
-							}
+						System.out.println("Glad to hear it, birds are better.");
+						BirdUserLaunches.main(null);
 					}
-				return userBird;
 				
 		}
 		
-		public static int pig()
+		public static void pig()
 		{
 				if(userBird == 2)
 					{
 						System.out.println("Story time! The AI Bird is angry, an Angry AI Bird if you will, and you are a pig...");
+						PigUserLaunches.main(null);
 					}
-				return userBird;
 		}
 
 	}
