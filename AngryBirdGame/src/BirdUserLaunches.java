@@ -1,5 +1,4 @@
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class BirdUserLaunches
@@ -17,7 +16,7 @@ static int userDay;
 				System.out.println(" Since you are a bird, you will be launching yourself into the pigs to destory them.");
 				
 				//birdLevels();
-				//launchDisplay();
+				launchDisplay();
 				launchCalculations();
 			}
 		public static void birdLevels()
@@ -56,7 +55,7 @@ static int userDay;
 		
 		public static void launchCalculations() 
 		{
-			System.out.println("Now you are going to launch into the pig by calculcating how far away the pig is. ");
+			System.out.println("\nNow you are going to launch into the pig by calculcating how far away the pig is. ");
 			//if (userDay == 10)
 				//{
 					System.out.println("Enter what acceleration you would like to launch at: ");
@@ -67,7 +66,6 @@ static int userDay;
 					
 					int randomDistance = (int)(Math.random()*20 + 1);
 				
-					DecimalFormat df = new DecimalFormat("#.000");
 					double calculatedDistance = ((userVelocity) * (userVelocity) ) / ( 2 * userAcceleration);
 					
 					System.out.println("Your calculated distance: " + calculatedDistance);
