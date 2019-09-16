@@ -1,3 +1,5 @@
+
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class BirdUserLaunches
@@ -63,10 +65,10 @@ static int userDay;
 					System.out.println("Enter what velocity you would like to launch at: ");
 					int userVelocity = intInput.nextInt();
 					
-					int randomDistance = (int)(Math.random()*10 + 1);
-					
+					int randomDistance = (int)(Math.random()*20 + 1);
 				
-					int calculatedDistance = (userVelocity * userVelocity ) / ( 2 * userAcceleration);
+					DecimalFormat df = new DecimalFormat("#.000");
+					double calculatedDistance = ((userVelocity) * (userVelocity) ) / ( 2 * userAcceleration);
 					
 					System.out.println("Your calculated distance: " + calculatedDistance);
 					System.out.println("Your actual distance: " + randomDistance);
@@ -76,11 +78,11 @@ static int userDay;
 						}
 					else if (calculatedDistance == 0)
 						{
-							System.out.println("Boooooo can't even calculate how off you were.");
+							System.out.println("Boooooo can't even calculate how off you were. ");
 						}
 					else 
 						{
-							int percentOff = Math.abs(randomDistance - calculatedDistance) / calculatedDistance;
+							double percentOff = Math.abs(randomDistance - calculatedDistance) / calculatedDistance;
 							System.out.println("Boooooo you missed! You were " + percentOff + "% off.");
 						}
 				//}
