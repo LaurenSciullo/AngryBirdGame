@@ -8,6 +8,7 @@ static Scanner intInput = new Scanner(System.in);
 
 static int userBird;
 static int userDay;
+static String fake;
 
 		public static void main(String[] args)
 			{
@@ -15,7 +16,7 @@ static int userDay;
 				System.out.print("\nGood luck!");
 				System.out.println(" Since you are a bird, you will be launching yourself into the pigs to destory them.");
 				
-				//birdLevels();
+				birdLevels();
 				launchDisplay();
 				launchCalculations();
 			}
@@ -55,9 +56,11 @@ static int userDay;
 		
 		public static void launchCalculations() 
 		{
-			System.out.println("\nNow you are going to launch into the pig by calculcating how far away the pig is. ");
-			//if (userDay == 10)
-				//{
+			for (int i = 0; i <= 4; i++)
+				{
+			System.out.println("\nNow you are going to launch into the pig by calculcating how far away the pig is. You have 5 tries. You have used: " + i );
+			if (userDay == 10)
+				{
 					System.out.println("Enter what acceleration you would like to launch at: ");
 					int userAcceleration = intInput.nextInt();
 					
@@ -73,6 +76,38 @@ static int userDay;
 					if (calculatedDistance == randomDistance)
 						{
 							System.out.println("Congrats! Your calculated distance matched the actual distance! ");
+							System.exit(0);
+						}
+					else if (calculatedDistance == 0)
+						{
+							System.out.println("Boooooo can't even calculate how off you were. ");
+							
+						}
+					else 
+						{
+							double percentOff = Math.abs(randomDistance - calculatedDistance) / calculatedDistance;
+							System.out.println("Boooooo you missed! You were " + percentOff + "% off.");
+							
+						}
+				}
+			else if (userDay == 5)
+				{
+					System.out.println("Enter what acceleration you would like to launch at: ");
+					int userAcceleration = intInput.nextInt();
+					
+					System.out.println("Enter what velocity you would like to launch at: ");
+					int userVelocity = intInput.nextInt();
+					
+					int randomDistance = (int)(Math.random()*5 + 1);
+				
+					double calculatedDistance = ((userVelocity) * (userVelocity) ) / ( 2 * userAcceleration);
+					
+					System.out.println("Your calculated distance: " + calculatedDistance);
+					System.out.println("Your actual distance: " + randomDistance);
+					if (calculatedDistance == randomDistance)
+						{
+							System.out.println("Congrats! Your calculated distance matched the actual distance! ");
+							System.exit(0);
 						}
 					else if (calculatedDistance == 0)
 						{
@@ -83,15 +118,28 @@ static int userDay;
 							double percentOff = Math.abs(randomDistance - calculatedDistance) / calculatedDistance;
 							System.out.println("Boooooo you missed! You were " + percentOff + "% off.");
 						}
-				//}
-			//else if (userDay == 5)
-			//	{
+				}
+			else 
+				{
+					System.out.println("Enter what acceleration you would like to launch at: ");
+					int userAcceleration = intInput.nextInt();
 					
-			//	}
-			//else 
-			//	{
+					System.out.println("Enter what velocity you would like to launch at: ");
+					int userVelocity = intInput.nextInt();
 					
-			//	}
+					double calculatedDistance = ((userVelocity) * (userVelocity) ) / ( 2 * userAcceleration);
+					
+					System.out.println("Your calculated distance: " + calculatedDistance);
+					System.out.println("Your actual distance: " + calculatedDistance);
+					
+							System.out.println("Congrats! Your calculated distance matched the actual distance! ");
+					
+							System.out.println("You were 0% off.");
+							System.exit(0);
+						
+				}
+			
+				}
 		}
 			
 	}
