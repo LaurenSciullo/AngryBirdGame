@@ -24,16 +24,17 @@ static String fake;
 	public static void launchDisplay()
 	{
 		System.out.println("\nYou silly PIG you, the AI Angry Bird is going to hit you, good luck: ");
-		System.out.println("                                         <(*' )");
-		
-		System.out.println("                                        *******");
-		
-		for (int i = 1; i <=2; i++)
-			{
-		System.out.println("                                        *     *");
-			}
-	
-		System.out.println("('*(oo)*')                              *******");
+		LaunchDisplays.main(null);
+//		System.out.println("                                         <(*' )");
+//		
+//		System.out.println("                                        *******");
+//		
+//		for (int i = 1; i <=2; i++)
+//			{
+//		System.out.println("                                        *     *");
+//			}
+//	
+//		System.out.println("('*(oo)*')                              *******");
 	}
 	
 	public static void chooseDistance()
