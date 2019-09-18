@@ -56,7 +56,7 @@ static String fake;
 			{
 		sum += p;
 			}
-		System.out.println("Hah! You got hit. Although you had a distance of " + sum + " the AI Angry Bird had an acceleration of: " + acceleration + "m/s^2 and therefore hit you!");
+		System.out.println("Hah! You got hit. Although you had a distance of " + userDistance + " the AI Angry Bird had an acceleration of: " + acceleration + "m/s^2 and therefore hit you!");
 		System.exit(0);
 			
 			}
