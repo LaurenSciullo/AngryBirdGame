@@ -1,6 +1,10 @@
 
 import java.util.Scanner;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class BirdUserLaunches
 	{
 static Scanner stringInput = new Scanner(System.in);
@@ -12,9 +16,13 @@ static String fake;
 
 		public static void main(String[] args)
 			{
-				System.out.println("\n (`*v*`) ");
+				
 				System.out.print("\nGood luck!");
 				System.out.println(" Since you are a bird, you will be launching yourself into the pigs to destory them.");
+				JFrame frame = new JFrame();
+				ImageIcon iconBird = new ImageIcon(("bird.jpg"));
+				
+				JOptionPane.showMessageDialog(frame, "This is you!", null, 0, iconBird);
 				
 				birdLevels();
 				launchDisplay();
@@ -41,17 +49,11 @@ static String fake;
 		
 		public static void launchDisplay()
 		{
-			System.out.println("\nYou angry bird you, this is you on your launch platform, and this is the pig you will hit: ");
-			System.out.println("(`*v*`)");
+			JFrame frame = new JFrame();
+			ImageIcon iconBirdSetup = new ImageIcon(("birdSetup.jpg"));
 			
-			System.out.println("*******");
+			JOptionPane.showMessageDialog(frame, "You angry bird you, this is you on your launch platform, and this is the pig you will hit!", null, 0, iconBirdSetup);
 			
-			for (int i = 1; i <=2; i++)
-				{
-					System.out.println("*     *");
-				}
-		
-			System.out.println("*******                                                      ('*(oo)*')");
 		}
 		
 		public static void launchCalculations() 
@@ -76,6 +78,10 @@ static String fake;
 					if (calculatedDistance == randomDistance)
 						{
 							System.out.println("Congrats! Your calculated distance matched the actual distance! ");
+							JFrame frame = new JFrame();
+							ImageIcon iconBirdHitPig = new ImageIcon(("birdHitPig.jpg"));
+							
+							JOptionPane.showMessageDialog(frame, iconBirdHitPig);
 							System.exit(0);
 						}
 					else if (calculatedDistance == 0)
@@ -85,9 +91,14 @@ static String fake;
 						}
 					else 
 						{
-							double percentOff = Math.abs(randomDistance - calculatedDistance) / calculatedDistance;
-							System.out.println("Boooooo you missed! You were " + percentOff + "% off.");
+							JFrame frame = new JFrame();
+							ImageIcon iconPigNotHit = new ImageIcon(("pigNotHit.png"));
 							
+							JOptionPane.showMessageDialog(frame, "Boooooo you missed!", null, 0, iconPigNotHit);
+							
+							double percentOff = Math.abs(randomDistance - calculatedDistance) / calculatedDistance;
+							System.out.println("You were " + percentOff + "% off.");
+				
 						}
 				}
 			else if (userDay == 5)
@@ -107,6 +118,10 @@ static String fake;
 					if (calculatedDistance == randomDistance)
 						{
 							System.out.println("Congrats! Your calculated distance matched the actual distance! ");
+							JFrame frame = new JFrame();
+							ImageIcon iconBirdHitPig = new ImageIcon(("birdHitPig.jpg"));
+							
+							JOptionPane.showMessageDialog(frame, iconBirdHitPig);
 							System.exit(0);
 						}
 					else if (calculatedDistance == 0)
@@ -115,6 +130,11 @@ static String fake;
 						}
 					else 
 						{
+							JFrame frame = new JFrame();
+							ImageIcon iconPigNotHit = new ImageIcon(("pigNotHit.png"));
+							
+							JOptionPane.showMessageDialog(frame, "Boooooo you missed!", null, 0, iconPigNotHit);
+							
 							double percentOff = Math.abs(randomDistance - calculatedDistance) / calculatedDistance;
 							System.out.println("Boooooo you missed! You were " + percentOff + "% off.");
 						}
@@ -133,7 +153,12 @@ static String fake;
 					System.out.println("Your actual distance: " + calculatedDistance);
 					
 							System.out.println("Congrats! Your calculated distance matched the actual distance! ");
-					
+							
+							JFrame frame = new JFrame();
+							ImageIcon iconBirdHitPig = new ImageIcon(("birdHitPig.jpg"));
+							
+							JOptionPane.showMessageDialog(frame, iconBirdHitPig);
+							
 							System.out.println("You were 0% off.");
 							System.exit(0);
 						

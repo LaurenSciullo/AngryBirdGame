@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class PigUserLaunches
 	{
 static Scanner stringInput = new Scanner(System.in);
@@ -11,7 +15,11 @@ static String fake;
 
 	public static void main(String[] args)
 				{
-				System.out.println("\n ('*(oo)*') ");
+				JFrame frame = new JFrame();
+				ImageIcon iconPig = new ImageIcon(("pig.jpg"));
+					
+				JOptionPane.showMessageDialog(frame, "This is you.", fake, userPig, iconPig);
+					
 				System.out.print("\nGood luck!");
 				System.out.println(" Since you are a pig,  you will be launched into by the AI Angry Bird... ( '*)>");
 				
@@ -24,17 +32,17 @@ static String fake;
 	public static void launchDisplay()
 	{
 		System.out.println("\nYou silly PIG you, the AI Angry Bird is going to hit you, good luck: ");
-		LaunchDisplays.main(null);
-//		System.out.println("                                         <(*' )");
-//		
-//		System.out.println("                                        *******");
-//		
-//		for (int i = 1; i <=2; i++)
-//			{
-//		System.out.println("                                        *     *");
-//			}
-//	
-//		System.out.println("('*(oo)*')                              *******");
+	
+		System.out.println("                                         <(*' )");
+		
+		System.out.println("                                        *******");
+		
+		for (int i = 1; i <=2; i++)
+			{
+		System.out.println("                                        *     *");
+			}
+	
+		System.out.println("('*(oo)*')                              *******");
 	}
 	
 	public static void chooseDistance()
