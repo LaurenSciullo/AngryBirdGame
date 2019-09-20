@@ -24,10 +24,19 @@ static String fake;
 				
 				JOptionPane.showMessageDialog(frame, "This is you!", null, 0, iconBird);
 				
-				birdLevels();
 				launchDisplay();
+				birdLevels();
 				launchCalculations();
 			}
+		
+		public static void launchDisplay()
+		{
+			JFrame frame = new JFrame();
+			ImageIcon iconBirdSetup = new ImageIcon(("birdSetup.jpg"));
+			
+			JOptionPane.showMessageDialog(frame, "You angry bird you, this is you on your launch platform, and this is the pig you will hit!", null, 0, iconBirdSetup);
+		}
+		
 		public static void birdLevels()
 			{
 					System.out.println("How was your day today? (10)Good, (5)Medium, (0)Bad.");		
@@ -46,15 +55,7 @@ static String fake;
 						}
 						
 					}
-		
-		public static void launchDisplay()
-		{
-			JFrame frame = new JFrame();
-			ImageIcon iconBirdSetup = new ImageIcon(("birdSetup.jpg"));
-			
-			JOptionPane.showMessageDialog(frame, "You angry bird you, this is you on your launch platform, and this is the pig you will hit!", null, 0, iconBirdSetup);
-			
-		}
+	
 		
 		public static void launchCalculations() 
 		{

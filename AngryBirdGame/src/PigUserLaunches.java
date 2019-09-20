@@ -19,9 +19,10 @@ static String fake;
 				ImageIcon iconPig = new ImageIcon(("pig.jpg"));
 					
 				JOptionPane.showMessageDialog(frame, "This is you.", fake, userPig, iconPig);
-					
-				System.out.print("\nGood luck!");
-				System.out.println(" Since you are a pig,  you will be launched into by the AI Angry Bird... ( '*)>");
+				
+				ImageIcon iconBird = new ImageIcon(("bird.jpg"));
+				
+				JOptionPane.showMessageDialog(frame, "This is the AI Angry Bird.", fake, userPig, iconBird);
 				
 				launchDisplay();
 				chooseDistance();
@@ -31,18 +32,11 @@ static String fake;
 
 	public static void launchDisplay()
 	{
-		System.out.println("\nYou silly PIG you, the AI Angry Bird is going to hit you, good luck: ");
-	
-		System.out.println("                                         <(*' )");
 		
-		System.out.println("                                        *******");
-		
-		for (int i = 1; i <=2; i++)
-			{
-		System.out.println("                                        *     *");
-			}
-	
-		System.out.println("('*(oo)*')                              *******");
+		JFrame frame = new JFrame();
+		ImageIcon iconPigSetup = new ImageIcon(("birdSetup.jpg"));
+			
+		JOptionPane.showMessageDialog(frame, "You silly PIG you, the AI Angry Bird is going to hit you, good luck.", fake, userPig, iconPigSetup);
 	}
 	
 	public static void chooseDistance()
@@ -65,16 +59,26 @@ static String fake;
 			{
 		sum += p;
 			}
+		JFrame frame = new JFrame();
+		ImageIcon iconHitPig = new ImageIcon(("birdHitPig.jpg"));
+		JOptionPane.showMessageDialog(frame, iconHitPig);
+		
 		System.out.println("Hah! You got hit. Although you had a distance of " + userDistance + " the AI Angry Bird had an acceleration of: " + acceleration + "m/s^2 and therefore hit you!");
-		System.exit(0);
+	
 			
 			}
 		else 
 			{
+			JFrame frame = new JFrame();
+			ImageIcon iconPigNotHit = new ImageIcon(("pigNotHit.png"));
+			JOptionPane.showMessageDialog(frame, iconPigNotHit);
 				System.out.println("You lukcy pig! Because you had a distance of " + userDistance + " you got away. You got a pass!");
-				System.out.println(" ( ';)>    AI Angry Bird is sad.");
+			
 				System.out.println("You have used: " + i + " tries. ");
-				System.out.println("\nHowever, you are still running!       (':(oo):')     you are a frightened pig now.");
+			
+				ImageIcon iconScaredPig = new ImageIcon(("scaredPig.jpg"));
+				JOptionPane.showMessageDialog(frame,"However, you are still running! You are a frightened pig now.", fake, userPig, iconScaredPig);
+				
 				System.out.println("Enter another distance to keep running: ");
 				userDistance = intInput.nextInt();
 				
