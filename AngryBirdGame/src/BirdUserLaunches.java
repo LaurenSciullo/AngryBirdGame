@@ -14,15 +14,15 @@ static int userBird;
 static int userDay;
 static String fake;
 
-		public static void main(String[] args)
+		public static void launchesBird()
 			{
 				
-				System.out.print("\nGood luck!");
+				System.out.print("Good luck!");
 				System.out.println(" Since you are a bird, you will be launching yourself into the pigs to destory them.");
+				
 				JFrame frame = new JFrame();
 				ImageIcon iconBird = new ImageIcon(("bird.jpg"));
-				
-				JOptionPane.showMessageDialog(frame, "This is you!", null, 0, iconBird);
+				JOptionPane.showMessageDialog(frame, "This is you!", fake, userBird, iconBird);
 				
 				launchDisplay();
 				birdLevels();

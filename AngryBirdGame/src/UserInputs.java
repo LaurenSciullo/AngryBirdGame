@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class UserInputs
 	{
@@ -8,7 +11,7 @@ static Scanner intInput = new Scanner(System.in);
 static int userBird;
 static String userName;
 		
-		public static void main(String[] args)
+		public static void takesInput()
 			{
 				System.out.println("Welcome to the Angry Birds Game! Enter your name to begin: ");
 				userName = stringInput.nextLine();
@@ -25,7 +28,10 @@ static String userName;
 				if (userBird == 1)
 					{
 						System.out.println("Glad to hear it, birds are better.");
-						BirdUserLaunches.main(null);
+						BirdUserLaunches.launchesBird();
+						BirdUserLaunches.launchDisplay();
+						BirdUserLaunches.birdLevels();
+						BirdUserLaunches.launchCalculations();
 					}
 				
 		}
@@ -36,7 +42,7 @@ static String userName;
 					{
 						System.out.println("Story time! The AI Bird is angry, an Angry AI Bird if you will, and you are a pig...");
 						
-						PigUserLaunches.main(null);
+						PigUserLaunches.launchesPig();
 					}
 		}
 

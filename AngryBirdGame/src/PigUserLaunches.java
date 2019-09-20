@@ -13,7 +13,7 @@ static int userPig;
 static double userDistance;
 static String fake;
 
-	public static void main(String[] args)
+	public static void launchesPig()
 				{
 				JFrame frame = new JFrame();
 				ImageIcon iconPig = new ImageIcon(("pig.jpg"));
@@ -64,7 +64,7 @@ static String fake;
 		JOptionPane.showMessageDialog(frame, iconHitPig);
 		
 		System.out.println("Hah! You got hit. Although you had a distance of " + userDistance + " the AI Angry Bird had an acceleration of: " + acceleration + "m/s^2 and therefore hit you!");
-	
+		System.exit(0);
 			
 			}
 		else 
